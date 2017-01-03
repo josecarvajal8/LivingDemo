@@ -1,0 +1,20 @@
+<ion-content padding style="background: url('assets/background.jpg')">
+
+  <div text-center >
+    <img src="assets/logoModificado.png">
+  </div>
+
+  <ion-list>
+    <ion-item class="itemInput">
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item class="itemInput">
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block outline color="light" (click)="onLogin()">Ingresar</button>
+  <button ion-button block clear color="light">¿Has olvidado tu contraseña?</button>
+</ion-content>
