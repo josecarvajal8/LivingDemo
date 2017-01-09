@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar color="purple">
+    <ion-title>Mesa {{numMesa}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="cart"></ion-icon></button>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item>
+      Aguardiente Blanco del Valle
+      <button ion-button clear item-right (click)="add(1,'Aguardiente Blanco del Valle')"><ion-icon name="add" style="font-size: 2em"></ion-icon></button>
+    </ion-item>
+    <ion-item>
+      Ron Viejo de Caldas
+      <button ion-button clear item-right (click)="add(2, 'Ron Viejo de Caldas')"><ion-icon name="add" style="font-size: 2em"></ion-icon></button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full [disabled]="orden.length<1" color="secondary" (click)="confirm()">Confirmar pedido</button>
+</ion-footer>
