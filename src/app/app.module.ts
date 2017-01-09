@@ -8,6 +8,8 @@ import { EstadoPage } from '../pages/estado/estado';
 import { PortalCPage } from '../pages/portal-c/portal-c';
 import { OrdenPage } from '../pages/orden/orden';
 
+import { Auth } from '../providers/auth';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -31,6 +33,8 @@ import { OrdenPage } from '../pages/orden/orden';
     PortalCPage,
     OrdenPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    Auth,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
